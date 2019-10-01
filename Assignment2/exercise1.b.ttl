@@ -1,0 +1,17 @@
+@prefix ns0: <https://github.com/hugonugraM/exercise1.a_ontology> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://github.com/hugonugraM/exercise1.#Class01>
+  ns0:includes <https://github.com/hugonugraM/exercise1.#Sensor029> ,
+  <https://github.com/hugonugraM/exercise1.#Computer101> .
+
+<https://github.com/hugonugraM/exercise1.#Sensor029>
+  ns0:hasMeasurement <hhttps://github.com/hugonugraM/exercise1.#Measurement8401> .
+
+<https://github.com/hugonugraM/exercise1.#Measurement8401>
+  ns0:atTime "2010-06-12T12:00:12"^^xsd:datetime ;
+  ns0:hasTemperature 29.0 .
+
+<https://github.com/hugonugraM/exercise1.#Computer101>
+  ns0:hasOwner <https://github.com/hugonugraM/exercise1.#User10A> ;
+  ns0:hasName "Pedro" .
