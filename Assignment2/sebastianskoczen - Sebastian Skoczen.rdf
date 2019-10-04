@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns="https://www.sebastian.skoczen/ontologies/assignment2b#"
+xml:base="https://www.sebastian.skoczen/ontologies/assignment2b">
+
+<rdf:Description rdf:about="Class01">
+    <includes rdf:resource="Sensor029"/>
+    <includes rdf:resource="Computer101"/> 
+</rdf:Description>
+
+<rdf:Description rdf:about="Sensor029">
+    <hasMeasurement rdf:resource="Measurement8401"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="Computer101">
+    <hasOwner rdf:resource="User10A"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="Measurement8401">
+    <atTime>2006-05-15</atTime>
+    <hasTemperature>29</hasTemperature>
+</rdf:Description>
+
+<rdf:Description rdf:about="User10A">
+    <hasName>Pedro</hasName>
+</rdf:Description>
+
+</rdf:RDF>
