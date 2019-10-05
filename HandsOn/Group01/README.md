@@ -1,6 +1,6 @@
 Team Member
 ==================
-Name Surname        - Github Username  
+**Name Surname        - Github Username**  
 Elisa Mateos        - EliMateos  
 Sebastian Skoczen   - sebastianskoczen  
 Serena Alderisi     - aserena7  
