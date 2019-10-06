@@ -1,0 +1,18 @@
+Column,Type,Range (rounded),Comments
+@id,String,Unique,"URI, prefix http://environment.data.gov.uk/water-quality/data/measurement/"
+sample.samplingPoint,String,320 choices,"URI, prefix http://environment.data.gov.uk/water-quality/id/sampling-point/"
+sample.samplingPoint.notation,String,320 choices,Suffix to samplingPoint
+sample.samplingPoint.label,String,320 choices,SampingPoint Location Names
+sample.sampleDateTime,TimeStamp,2018-01-01 to 2018-12-20,From 2018-01-01-00:07:00 to 2018-12-20-14:24:00
+determinand.label,String,499 choices,Chemical determinand labels
+determinand.definition,String,501 choices,Definition of above labels
+determinand.notation,Decimal,"0.00 - 10,000.00",Notation of above definitions
+resultQualifier.notation,Operator,">, < or empty","Result qualifier, defined as excess, normal or insufficient level"
+result,Decimal,"0.00 - 10,000,000.00",Chemical determinand levels
+codedResultInterpretation.interpretation,String,Empty,
+Determinand.unit.label,String,24 choices,Units of chemical determinand measurements
+sample.sampledMaterialType.label,String,15 choices,Sample’s material type
+sample.isComplianceSample,Boolean,true/false,Boolean of if sample is compliance
+sample.purpose.label,String,13 choices,The purpose of the sample taken
+sample.samplingPoint.easting,Decimal,301 choices,Easting coordinate (UTM System) where the sample was taken
+sample.samplingPoint.northing,Decimal,309 choices,Northing coordinate (UTM System) where the sample was taken

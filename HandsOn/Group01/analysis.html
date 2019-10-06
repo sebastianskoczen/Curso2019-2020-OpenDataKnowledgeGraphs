@@ -4,13 +4,13 @@
       font-family: arial, sans-serif;
       border-collapse: collapse;
     }
-    
+
     td, th {
       border: 1px solid #dddddd;
       text-align: left;
       padding: 8px;
     }
-    
+
     tr:nth-child(even) {
       background-color: #dddddd;
     }
@@ -21,11 +21,29 @@
 </head>
 <body>
     <h1>Analyses performed over the data source</h1>
-    
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+
+        <script type="text/javascript" charset="utf-8">
+          d3.text("https://raw.githubusercontent.com/XiaoLuo95/Curso2019-2020-OpenDataKnowledgeGraphs/master/HandsOn/Group01/csv/DataAnalysis.csv", function(data) {
+            var parsedCSV = d3.csv.parseRows(data);
+
+            var container = d3.select("body")
+              .append("table")
+
+              .selectAll("tr")
+              .data(parsedCSV).enter()
+              .append("tr")
+
+              .selectAll("td")
+              .data(function (d) { return d; }).enter()
+              .append("td")
+              .text(function (d) { return d; });
+          });
+        </script>
     <h1>Licensing of the data source</h1>
 
     <h1>Resource naming strategy</h1>
-    
+
     <table>
         <tr>
           <th>Name</th>
@@ -52,6 +70,6 @@
           <td>http://group01.com/resource/&lt;resource_type&gt;/&lt;resource_name&gt;</td>
         </tr>
       </table>
-		
+
 	</body>
 </html>
