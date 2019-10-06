@@ -1,10 +1,46 @@
 <!DOCTYPE html>
-<head>
-	<meta charset="UTF-8">
-	<title>Requirements group 09</title>
-</head>
-<body>
-	<h1>Application requirements</h1>
-		
-	</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Requirements group 09</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        border: 2px black solid;
+        font: 12px sans-serif;
+      }
+
+      td {
+        border: 1px black solid;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+
+    <h2>Application requirements:</h2>
+    <ul>
+      <li>Display the content of the csv file with correct format</li>
+      <li>Variables label at first row</li>
+    </ul>
+
+    <script type="text/javascript" charset="utf-8">
+      d3.text("https://raw.githubusercontent.com/Alejandro-Cobo/Curso2019-2020-OpenDataKnowledgeGraphs/master/HandsOn/Group01/csv/HNL-2018.csv", function(data) {
+        var parsedCSV = d3.csv.parseRows(data);
+
+        var container = d3.select("body")
+          .append("table")
+
+          .selectAll("tr")
+            .data(parsedCSV).enter()
+            .append("tr")
+
+          .selectAll("td")
+            .data(function (d) { return d; }).enter()
+            .append("td")
+            .text(function (d) { return d; });
+      });
+    </script>
+  </body>
 </html>
