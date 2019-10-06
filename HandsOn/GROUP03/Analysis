@@ -1,0 +1,23 @@
+<!doctype.html>
+
+<html lang ="en">
+<head>
+	<meta charset="utf-8">
+	
+	<title>Analysis</title>
+	
+</head>
+
+<body>
+	<div><t1><b> Analysis of Licensing of the Data Source</b><t1></div>	
+	<ul>
+	<li>The data set is published by the UK Government under the Open Government Licence for public sector information</li>
+	<li>The licence is compatible with the Creative Commons Attribution (CC-BY) licence and is maintained by the National Archives</li>
+	<li>The licence allows us to use the dataset freely under the proposed application</li>
+	<li>The link to the licence can be found <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">here</a>
+	</ul>
+	
+	
+</body>
+</html>
+	
