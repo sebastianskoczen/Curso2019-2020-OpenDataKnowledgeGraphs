@@ -1,0 +1,14 @@
+@base <https://www.sebastian.skoczen/ontologies/assignment2b>.
+@prefix : <https://www.sebastian.skoczen/ontologies/assignment2b#>.
+
+<Class01> :includes <Sensor029>;
+          :includes <Computer101>.
+
+<Sensor029> :hasMeasurement <Measurement8401>.
+
+<Computer101> :hasOwner <User10A>.
+
+<Measurement8401> :atTime "2006-05-15";
+                 :hasTemperature "29".
+
+<User10A> :hasName "Pedro".
