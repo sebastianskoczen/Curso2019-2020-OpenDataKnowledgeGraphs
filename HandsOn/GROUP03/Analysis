@@ -18,6 +18,21 @@
 	</ul>
 	
 	
+	
+	
+	
+	<div><t1><b> Defining resource naming strategy:</b></t1></div>
+    	<ul>
+  	<li>The URI domain to be used is <b>http://group03.org/</b> this domain is chosen because it's available.</li>
+  	<li> A subfolder "saferoad" will be added to the domain as the ontology model and the data are related to "saferoads" application.</li>
+  	<li> Ontology model classes: the classes in the ontology will have the form
+	<b>http://group03.org/saferoads/ontology/<i>OntologyNAME#ClassNAME</i></b></li>
+  	<li>Ontology model properties: the properties in the ontology will have the form 
+	<b>http://group03.org/saferoads/ontology/<i>OntologyNAME</i>#<i>PrropertyNAME</i></b></li>
+  	<li>Instances: the instances in the ontology will have the form
+	<b>http://group03.org/saferoads/ontology/resource/<i>ClassNAME</i>#<i>IDENTIFIER</i></b></li>
+  	</ul>
+	
 </body>
 </html>
 	
