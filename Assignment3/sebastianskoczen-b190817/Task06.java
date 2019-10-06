@@ -51,16 +51,17 @@ public class Task06
 		Property worksIn = model.createProperty(ns+"worksIN");
 		
 		// ** TASK 6.4: Create a new individual of Researcher named "Jane Smith" **
-		Individual janeSmith = model.createIndividual(ns+"Jane_Smith",researcher);
+		Individual janeSmith = model.createIndividual(ns+"JaneSmith",researcher);
 		
 		// ** TASK 6.5: Add to the individual JaneSmith the fullName, given and family names **
-		janeSmith.addProperty(model.getProperty("http://www.w3.org/2001/vcard-rdf/3.0/FN"), "Jane Smith");
-		janeSmith.addProperty(model.getProperty("http://www.w3.org/2001/vcard-rdf/3.0/Given"),"Jane");
-		janeSmith.addProperty(model.getProperty("http://www.w3.org/2001/vcard-rdf/3.0/Family"),"Smith");
+		janeSmith.addLiteral(model.getProperty("http://www.w3.org/2001/vcard-rdf/3.0/FN"), "Jane Smith");
+		janeSmith.addLiteral(model.getProperty("http://www.w3.org/2001/vcard-rdf/3.0/Given"),"Jane");
+		janeSmith.addLiteral(model.getProperty("http://www.w3.org/2001/vcard-rdf/3.0/Family"),"Smith");
 		
 		// ** TASK 6.6: Add UPM as the university where John Smith works **
 		Individual upm = model.createIndividual(ns+"UPM",university);
-		janeSmith.addProperty(worksIn,upm);
+		Individual johnSmith = model.getIndividual(ns+"JohnSmith");
+		johnSmith.addProperty(worksIn,upm);
 		
 		model.write(System.out, "RDF/XML-ABBREV");
 	}
