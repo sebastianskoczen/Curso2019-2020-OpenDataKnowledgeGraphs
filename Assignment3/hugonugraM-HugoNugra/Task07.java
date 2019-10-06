@@ -25,7 +25,7 @@ public class Task07
 		String filename = "resources/example6.rdf";
 		
 		// Create an empty model
-		OntModel model = ModelFactory.createOntologyModel(OntModelSpec.RDFS_MEM);
+		OntModel model = ModelFactory.createOntologyModel(OntModelSpec.RDFS_MEM_TRANS_INF);
 		
 		// Use the FileManager to find the input file
 		InputStream in = FileManager.get().open(filename);
@@ -60,7 +60,29 @@ public class Task07
 		
 		
 		// ** TASK 7.3: Make the necessary changes to get as well indirect instances and subclasses. TIP: you need some inference... **
-		
-	
+		printInstances(person);
+
+	}
+
+	public static void printInstances(OntClass ontclass)
+	{
+		// print instances
+		ExtendedIterator instances = ontclass.listInstances();
+		System.out.println(" \nInstances of "+ontclass.getURI()+":");
+		while (instances.hasNext())
+		{
+			Individual inst = (Individual) instances.next();
+			System.out.println("Instance of "+ontclass.getURI()+": "+inst.getURI());
+		}
+
+		//repeat process with subclasses recursively
+		ExtendedIterator subclasses = ontclass.listSubClasses();
+		while (subclasses.hasNext())
+		{
+			OntClass subclass = (OntClass) subclasses.next();
+			//call to the same function
+			printInstances(subclass);
+		}
+		return;
 	}
 }
