@@ -21,13 +21,14 @@
 </head>
 <body>
     <h1>Analyses performed over the data source</h1>
+        <div id="analysis"></div>
         <script src="http://d3js.org/d3.v3.min.js"></script>
 
         <script type="text/javascript" charset="utf-8">
           d3.text("https://raw.githubusercontent.com/XiaoLuo95/Curso2019-2020-OpenDataKnowledgeGraphs/master/HandsOn/Group01/csv/DataAnalysis.csv", function(data) {
             var parsedCSV = d3.csv.parseRows(data);
 
-            var container = d3.select("body")
+            var container = d3.select("#analysis")
               .append("table")
 
               .selectAll("tr")

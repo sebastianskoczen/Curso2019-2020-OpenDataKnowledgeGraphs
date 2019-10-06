@@ -1,4 +1,4 @@
-Column,Type,Range (rounded),Comments
+Variable,Type,Range (rounded),Comments
 @id,String,Unique,"URI, prefix http://environment.data.gov.uk/water-quality/data/measurement/"
 sample.samplingPoint,String,320 choices,"URI, prefix http://environment.data.gov.uk/water-quality/id/sampling-point/"
 sample.samplingPoint.notation,String,320 choices,Suffix to samplingPoint
