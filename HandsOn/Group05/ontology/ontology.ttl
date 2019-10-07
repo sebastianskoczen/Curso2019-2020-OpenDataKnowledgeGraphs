@@ -1,48 +1,48 @@
-@prefix : <http://group01.com/ontology/Water-Quality#> .
+@prefix : <http://group05.com/ontology/Water-Quality#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://group01.com/ontology/Water-Quality> .
+@base <http://group05.com/ontology/Water-Quality> .
 
-<http://group01.com/ontology/Water-Quality> rdf:type owl:Ontology .
+<http://group05.com/ontology/Water-Quality> rdf:type owl:Ontology .
 
 #################################################################
 #    Object Properties
 #################################################################
 
-###  http://group01.com/ontology/Water-Quality#hasDateTime
+###  http://group05.com/ontology/Water-Quality#hasDateTime
 :hasDateTime rdf:type owl:ObjectProperty ;
              rdfs:domain :Sample ;
              rdfs:range :SampleDateTime .
 
 
-###  http://group01.com/ontology/Water-Quality#hasDeterminand
+###  http://group05.com/ontology/Water-Quality#hasDeterminand
 :hasDeterminand rdf:type owl:ObjectProperty ;
                 rdfs:domain :Sample ;
                 rdfs:range :Determinand .
 
 
-###  http://group01.com/ontology/Water-Quality#hasMaterialType
+###  http://group05.com/ontology/Water-Quality#hasMaterialType
 :hasMaterialType rdf:type owl:ObjectProperty ;
                  rdfs:domain :Sample ;
                  rdfs:range :SampledMaterialType .
 
 
-###  http://group01.com/ontology/Water-Quality#hasPurpose
+###  http://group05.com/ontology/Water-Quality#hasPurpose
 :hasPurpose rdf:type owl:ObjectProperty ;
             rdfs:domain :Sample ;
             rdfs:range :SamplePurpose .
 
 
-###  http://group01.com/ontology/Water-Quality#hasResult
+###  http://group05.com/ontology/Water-Quality#hasResult
 :hasResult rdf:type owl:ObjectProperty ;
            rdfs:domain :Sample ;
            rdfs:range :Result .
 
 
-###  http://group01.com/ontology/Water-Quality#hasSamplingPoint
+###  http://group05.com/ontology/Water-Quality#hasSamplingPoint
 :hasSamplingPoint rdf:type owl:ObjectProperty ;
                   rdfs:domain :Sample ;
                   rdfs:range :SamplingPoint .
@@ -52,55 +52,55 @@
 #    Data properties
 #################################################################
 
-###  http://group01.com/ontology/Water-Quality#DateTime
+###  http://group05.com/ontology/Water-Quality#DateTime
 :DateTime rdf:type owl:DatatypeProperty ;
           rdfs:domain :SampleDateTime ;
           rdfs:range xsd:dateTime .
 
 
-###  http://group01.com/ontology/Water-Quality#Determinand_definition
+###  http://group05.com/ontology/Water-Quality#Determinand_definition
 :Determinand_definition rdf:type owl:DatatypeProperty ;
                         rdfs:domain :Determinand ;
                         rdfs:range xsd:string .
 
 
-###  http://group01.com/ontology/Water-Quality#Determinand_label
+###  http://group05.com/ontology/Water-Quality#Determinand_label
 :Determinand_label rdf:type owl:DatatypeProperty ;
                    rdfs:domain :Determinand ;
                    rdfs:range xsd:string .
 
 
-###  http://group01.com/ontology/Water-Quality#Determinand_notation
+###  http://group05.com/ontology/Water-Quality#Determinand_notation
 :Determinand_notation rdf:type owl:DatatypeProperty ;
                       rdfs:domain :Determinand ;
                       rdfs:range xsd:decimal .
 
 
-###  http://group01.com/ontology/Water-Quality#Determinand_unit
+###  http://group05.com/ontology/Water-Quality#Determinand_unit
 :Determinand_unit rdf:type owl:DatatypeProperty ;
                   rdfs:domain :Determinand ;
                   rdfs:range xsd:string .
 
 
-###  http://group01.com/ontology/Water-Quality#MaterialType_label
+###  http://group05.com/ontology/Water-Quality#MaterialType_label
 :MaterialType_label rdf:type owl:DatatypeProperty ;
                     rdfs:domain :SampledMaterialType ;
                     rdfs:range xsd:string .
 
 
-###  http://group01.com/ontology/Water-Quality#Result_value
+###  http://group05.com/ontology/Water-Quality#Result_value
 :Result_value rdf:type owl:DatatypeProperty ;
               rdfs:domain :Result ;
               rdfs:range xsd:decimal .
 
 
-###  http://group01.com/ontology/Water-Quality#SamplingPoint_easting
+###  http://group05.com/ontology/Water-Quality#SamplingPoint_easting
 :SamplingPoint_easting rdf:type owl:DatatypeProperty ;
                        rdfs:domain :SamplingPoint ;
                        rdfs:range xsd:decimal .
 
 
-###  http://group01.com/ontology/Water-Quality#SamplingPoint_northing
+###  http://group05.com/ontology/Water-Quality#SamplingPoint_northing
 :SamplingPoint_northing rdf:type owl:DatatypeProperty ;
                         rdfs:domain :SamplingPoint ;
                         rdfs:range xsd:decimal .
@@ -110,31 +110,31 @@
 #    Classes
 #################################################################
 
-###  http://group01.com/ontology/Water-Quality#Determinand
+###  http://group05.com/ontology/Water-Quality#Determinand
 :Determinand rdf:type owl:Class .
 
 
-###  http://group01.com/ontology/Water-Quality#Result
+###  http://group05.com/ontology/Water-Quality#Result
 :Result rdf:type owl:Class .
 
 
-###  http://group01.com/ontology/Water-Quality#Sample
+###  http://group05.com/ontology/Water-Quality#Sample
 :Sample rdf:type owl:Class .
 
 
-###  http://group01.com/ontology/Water-Quality#SampleDateTime
+###  http://group05.com/ontology/Water-Quality#SampleDateTime
 :SampleDateTime rdf:type owl:Class .
 
 
-###  http://group01.com/ontology/Water-Quality#SamplePurpose
+###  http://group05.com/ontology/Water-Quality#SamplePurpose
 :SamplePurpose rdf:type owl:Class .
 
 
-###  http://group01.com/ontology/Water-Quality#SampledMaterialType
+###  http://group05.com/ontology/Water-Quality#SampledMaterialType
 :SampledMaterialType rdf:type owl:Class .
 
 
-###  http://group01.com/ontology/Water-Quality#SamplingPoint
+###  http://group05.com/ontology/Water-Quality#SamplingPoint
 :SamplingPoint rdf:type owl:Class .
 
 
