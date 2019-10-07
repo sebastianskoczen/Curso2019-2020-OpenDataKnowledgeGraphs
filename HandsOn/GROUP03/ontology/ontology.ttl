@@ -12,28 +12,85 @@
 #    Annotation properties
 #################################################################
 
-###  http://www.group03.org/saferoads/TrafficAccidentsontology#involves
-:involves rdf:type owl:AnnotationProperty .
-
-
 ###  http://www.group03.org/saferoads/TrafficAccidentsontology#lightcondition
 :lightcondition rdf:type owl:AnnotationProperty .
 
 
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#has_victim
+:has_victim rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain :Accident ;
+            rdfs:range :Casuality .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#involves
+:involves rdf:type owl:ObjectProperty ;
+          rdfs:domain :Accident ;
+          rdfs:range :Vehicle .
+
+
 ###  http://www.group03.org/saferoads/TrafficAccidentsontology#takes_place_in
-:takes_place_in rdf:type owl:AnnotationProperty .
+:takes_place_in rdf:type owl:ObjectProperty ;
+                rdfs:domain :Accident ;
+                rdfs:range :environment .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#victim_of
+:victim_of rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:domain :Casuality ;
+           rdfs:range :Accident .
 
 
 #################################################################
 #    Data properties
 #################################################################
 
-###  http://www.group03.org/saferoads/TrafficAccidentsontology#Darkness
-:Darkness rdf:type owl:DatatypeProperty .
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#age
+:age rdf:type owl:DatatypeProperty ;
+     rdfs:domain :Casuality ;
+     rdfs:range xsd:int .
 
 
-###  http://www.group03.org/saferoads/TrafficAccidentsontology#Daylight
-:Daylight rdf:type owl:DatatypeProperty .
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#date
+:date rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Accident ;
+      rdfs:range xsd:dateTime .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#grid_ref_easting
+:grid_ref_easting rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Accident ;
+                  rdfs:range xsd:int .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#grid_ref_northing
+:grid_ref_northing rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Accident ;
+                   rdfs:range xsd:int .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#nbr_vehicles
+:nbr_vehicles rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain :Accident ;
+              rdfs:range xsd:int .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#time
+:time rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Accident ;
+      rdfs:range xsd:string .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#first_road_class_&_number
+<http://www.group03.org/saferoads/TrafficAccidentsontology#first_road_class_&_number> rdf:type owl:DatatypeProperty ;
+                                                                                      rdfs:domain :Accident ;
+                                                                                      rdfs:range xsd:string .
 
 
 #################################################################
@@ -53,11 +110,6 @@
        rdfs:subClassOf :Casuality .
 
 
-###  http://www.group03.org/saferoads/TrafficAccidentsontology#Date
-:Date rdf:type owl:Class ;
-      rdfs:subClassOf :Accident .
-
-
 ###  http://www.group03.org/saferoads/TrafficAccidentsontology#Lighting_Conditions
 :Lighting_Conditions rdf:type owl:Class ;
                      rdfs:subClassOf :environment .
@@ -71,11 +123,6 @@
 ###  http://www.group03.org/saferoads/TrafficAccidentsontology#Severity
 :Severity rdf:type owl:Class ;
           rdfs:subClassOf :Casuality .
-
-
-###  http://www.group03.org/saferoads/TrafficAccidentsontology#Time
-:Time rdf:type owl:Class ;
-      rdfs:subClassOf :Accident .
 
 
 ###  http://www.group03.org/saferoads/TrafficAccidentsontology#Type
@@ -93,16 +140,7 @@
 
 
 ###  http://www.group03.org/saferoads/TrafficAccidentsontology#environment
-:environment rdf:type owl:Class ;
-             owl:equivalentClass [ rdf:type owl:Restriction ;
-                                   owl:onProperty :Darkness ;
-                                   owl:someValuesFrom owl:rational
-                                 ] .
-
-
-###  http://www.group03.org/saferoads/TrafficAccidentsontology#nbr_vehicles
-:nbr_vehicles rdf:type owl:Class ;
-              rdfs:subClassOf :Accident .
+:environment rdf:type owl:Class .
 
 
 ###  http://www.group03.org/saferoads/TrafficAccidentsontology#sex
