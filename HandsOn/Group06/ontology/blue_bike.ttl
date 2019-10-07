@@ -1,0 +1,225 @@
+@prefix : <http://www.semanticweb.org/nenkon/ontologies/2019/9/BlueBike#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/nenkon/ontologies/2019/9/BlueBike> .
+
+<http://www.semanticweb.org/nenkon/ontologies/2019/9/BlueBike> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/nenkon/ontologies/2019/9/BlueBike#end_station
+:end_station rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:domain [ rdf:type owl:Restriction ;
+                           owl:onProperty :end_station ;
+                           owl:someValuesFrom :Bike_trip
+                         ] ;
+             rdfs:range [ rdf:type owl:Restriction ;
+                          owl:onProperty :end_station ;
+                          owl:someValuesFrom :Station
+                        ] .
+
+
+###  http://www.semanticweb.org/nenkon/ontologies/2019/9/BlueBike#has_bike
+:has_bike rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:domain [ rdf:type owl:Restriction ;
+                        owl:onProperty :has_user ;
+                        owl:someValuesFrom :Bike_trip
+                      ] ;
+          rdfs:range [ rdf:type owl:Restriction ;
+                       owl:onProperty :has_user ;
+                       owl:someValuesFrom :Bike
+                     ] .
+
+
+###  http://www.semanticweb.org/nenkon/ontologies/2019/9/BlueBike#has_user
+:has_user rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:domain [ rdf:type owl:Restriction ;
+                        owl:onProperty :has_user ;
+                        owl:someValuesFrom :Bike_trip
+                      ] ;
+          rdfs:range [ rdf:type owl:Restriction ;
+                       owl:onProperty :has_user ;
+                       owl:someValuesFrom :Bike_user
+                     ] .
+
+
+###  http://www.semanticweb.org/nenkon/ontologies/2019/9/BlueBike#start_station
+:start_station rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:domain [ rdf:type owl:Restriction ;
+                             owl:onProperty :street_segments ;
+                             owl:someValuesFrom :Bike_trip
+                           ] ;
+               rdfs:range [ rdf:type owl:Restriction ;
+                            owl:onProperty :street_segments ;
+                            owl:someValuesFrom :Station
+                          ] .
+
+
+###  http://www.semanticweb.org/nenkon/ontologies/2019/9/BlueBike#street_segments
+:street_segments rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ;
+                 rdfs:domain [ rdf:type owl:Restriction ;
+                               owl:onProperty :street_segments ;
+                               owl:someValuesFrom :Network
+                             ] ;
+                 rdfs:range [ rdf:type owl:Restriction ;
+                              owl:onProperty :street_segments ;
+                              owl:someValuesFrom :Street_segment
+                            ] .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/nenkon/ontologies/2019/9/BlueBike#end_time
+:end_time rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain [ rdf:type owl:Restriction ;
+                        owl:onProperty :end_station ;
+                        owl:someValuesFrom :Bike_trip
+                      ] ;
+          rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/nenkon/ontologies/2019/9/BlueBike#has_bike_id
+:has_bike_id rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain [ rdf:type owl:Restriction ;
+                           owl:onProperty :start_station ;
+                           owl:someValuesFrom :Bike_trip
+                         ] ;
+             rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/nenkon/ontologies/2019/9/BlueBike#has_gender
+:has_gender rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain [ rdf:type owl:Restriction ;
+                          owl:onProperty :start_station ;
+                          owl:someValuesFrom :Bike_user
+                        ] ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/nenkon/ontologies/2019/9/BlueBike#has_latitude
+:has_latitude rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain [ rdf:type owl:Restriction ;
+                            owl:onProperty :start_station ;
+                            owl:someValuesFrom :Street_segment
+                          ] ;
+              rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/nenkon/ontologies/2019/9/BlueBike#has_longitude
+:has_longitude rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain [ rdf:type owl:Restriction ;
+                             owl:onProperty :start_station ;
+                             owl:someValuesFrom :Street_segment
+                           ] ;
+               rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/nenkon/ontologies/2019/9/BlueBike#has_name
+:has_name rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain [ rdf:type owl:Restriction ;
+                        owl:onProperty :start_station ;
+                        owl:someValuesFrom :Bike_user
+                      ] ;
+          rdfs:range xsd:Name .
+
+
+###  http://www.semanticweb.org/nenkon/ontologies/2019/9/BlueBike#has_segment_id
+:has_segment_id rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :Street_segment ;
+                rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/nenkon/ontologies/2019/9/BlueBike#has_station_name
+:has_station_name rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdfs:domain :Station ;
+                  rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/nenkon/ontologies/2019/9/BlueBike#has_street_name
+:has_street_name rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain :Street_segment ;
+                 rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/nenkon/ontologies/2019/9/BlueBike#has_trip_id
+:has_trip_id rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :Bike_trip ;
+             rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/nenkon/ontologies/2019/9/BlueBike#has_user_id
+:has_user_id rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :Bike_user ;
+             rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/nenkon/ontologies/2019/9/BlueBike#start_time
+:start_time rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain [ rdf:type owl:Restriction ;
+                          owl:onProperty :start_station ;
+                          owl:someValuesFrom :Bike_trip
+                        ] ;
+            rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/nenkon/ontologies/2019/9/BlueBike#user_type
+:user_type rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty ;
+           rdfs:domain :Bike_user ;
+           rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/nenkon/ontologies/2019/9/BlueBike#Bike
+:Bike rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/nenkon/ontologies/2019/9/BlueBike#Bike_trip
+:Bike_trip rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/nenkon/ontologies/2019/9/BlueBike#Bike_user
+:Bike_user rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/nenkon/ontologies/2019/9/BlueBike#Network
+:Network rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/nenkon/ontologies/2019/9/BlueBike#Station
+:Station rdf:type owl:Class ;
+         rdfs:subClassOf :Street_segment .
+
+
+###  http://www.semanticweb.org/nenkon/ontologies/2019/9/BlueBike#Street_segment
+:Street_segment rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

@@ -1,0 +1,53 @@
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Dataset Analysis</title>
+</head>
+
+<body>
+    <header>
+        <h2>Dataset Analysis and Naming Strategy</h2>
+    </header>
+    <p>
+        //TODO
+    </p>
+    
+    
+    <p>
+        <h4>Naming Strategy</h4>
+        According to the principles of Linked Open Data and to the best practices for URIs by well-established guides, we opted for the following naming strategy:
+        <br><br><br>
+        •	According to the Cool URIs guide [Sauermann and Cyganiak, 2008], hash URIs will be used since our dataset and our onotology are, at the moment, rather small.
+        <br><br><br>
+        •	The URI domain chosen is <i>www.bostonbikenetwork.com</i>; we opted for that since it is under our direct control (potentially: it is available, but we didn't actually purchase it. We will consider it as it were ours for the purpose of these assignments).
+        <br><br><br>
+        •	Ontology model for classes: the classes of the ontology will have the form of:<br>
+
+&nbsp&nbsp&nbsp <i>       www.bostonbikenetwork.com/ontology/&lt;ontologyName&gt;#&lt;className&gt;</i><br>
+        
+&nbsp    An example for the class Bike in the bike ontology could be:<br>
+
+&nbsp&nbsp&nbsp <i>       www.bostonbikenetwork.com/ontology/BikeOntology#Bike<br></i>
+        <br><br>
+        •	Ontolody model for properties: the properties of the ontology will have the form of:<br>
+
+&nbsp&nbsp&nbsp <i>       www.bostonbikenetwork.com/ontology/&lt;ontologyName&gt;#&lt;propertyName&gt;</i><br>
+
+&nbsp        An example for the property hasID of the Bike class in the bike ontology could be:<br>
+
+&nbsp&nbsp&nbsp <i>       www.bostonbikenetwork.com/ontology/BikeOntology#hasID<br></i>
+        <br><br>
+        •	Instances model: the instances in the ontology will have the form of:<br>
+
+&nbsp&nbsp&nbsp <i>       www.bostonbikenetwork.com/resource/&lt;className&gt;#&lt;identifier&gt;</i><br>
+        
+&nbsp        An example for the instance of a bike with ID <i>1ur8f42f7</i> could be:<br>
+
+&nbsp&nbsp&nbsp <i>       www.bostonbikenetwork.com/resource/Bike#1ur8f42f7</i><br>
+&nbsp       It is important to be noted that the ID naming strategy is independent from the URI naming strategy, and that individual URIs are independent, from a strict point of view, from
+    </p>
+
+</body>
+
+</html>

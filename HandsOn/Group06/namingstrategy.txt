@@ -1,0 +1,34 @@
+According to the principles of Linked Open Data and to the best practices for URIs by well-established guides, we opted for the following naming strategy:
+
+
+According to the Cool URIs guide [Sauermann and Cyganiak, 2008], hash URIs will be used since our dataset and our onotology are, at the moment, rather small.
+
+
+The URI domain chosen is www.bostonbikenetwork.com; we opted for that since it is under our direct control (potentially: it is available, but we didn't actually purchase it. We will consider it as it were ours for the purpose of these assignments).
+
+
+Ontology model for classes: the classes of the ontology will have the form of
+
+        www.bostonbikenetwork.com/ontology/<ontologyName>#<className>
+        
+An example for the class Bike in the bike ontology could be 
+
+        www.bostonbikenetwork.com/ontology/BikeOntology#Bike
+        
+        
+Ontolody model for properties: the properties of the ontology will have the form of
+
+        www.bostonbikenetwork.com/ontology/<ontologyName>#<propertyName>
+
+An example for the property hasID of the Bike class in the bike ontology could be
+
+        www.bostonbikenetwork.com/ontology/BikeOntology#hasID
+
+        
+Instances model: the instances in the ontology will have the form
+
+        www.bostonbikenetwork.com/resource/<className>#<identifier>
+        
+An example for the instance of a bike with ID 1ur8f42f7 could be
+
+        www.bostonbikenetwork.com/resource/Bike#1ur8f42f7
