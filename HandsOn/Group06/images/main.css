@@ -1,0 +1,40 @@
+h1 {
+  color: #7c795d;
+  font-family: 'Trocchi', serif;
+  font-weight: normal;
+  line-height: 48px;
+  margin: 0;
+}
+
+h2 {
+  color: #7c795d;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+h3 {
+    color: #7c795d;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+h4 {
+    color: #7c795d;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+body {
+  background-color:#FEFAD7;
+  color: #4c4a37;
+  font-family: 'Source Sans Pro',
+  sans-serif;
+  line-height: 32px;
+  margin: 3% 10%; }
+
+a { color: #ff9900; background: #fff4a3; text-decoration: none; }
+
+a:hover { color: #ffcc66 }
