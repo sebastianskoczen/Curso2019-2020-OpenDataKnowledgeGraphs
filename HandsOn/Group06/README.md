@@ -1,15 +1,10 @@
 
-###Team Members and GitHub usernames###
+### Team presentation and GitHub usernames ###
 
-Name: _Chenchen He_  
-GitHub: _he-chenchen_
+This Open Data and Knowledge Graphs project is made by:  
+* Chenchen He (www.github.com/He-Chenchen)
+* Yanjun Pu (www.github.com/NenkonPu)
+* Cristina Rios (www.github.com/Cristina-Rios)
+* Giorgio Polla (www.github.com/GiorgioPolla)
 
-Name: _Yanjun Pu_  
-GitHub: _NenkonPu_
-
-Name: _Cristina Rios_  
-GitHub: _Cristina-Rios_
-
-Name: _Giorgio Polla_  
-GitHub: _GiorgioPolla_
- 
+The project is updated at the Hands On Assignment 2 (HOA2).
