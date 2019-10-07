@@ -4,7 +4,7 @@
 
 **The “analysis.html” file:**
 
-- [ ] Includes the potential license of the dataset to be generated
+- [X] Includes the potential license of the dataset to be generated
 - [X] Includes the resource naming strategy
 
 **The resource naming strategy:**
@@ -31,4 +31,4 @@
 - [ ] Contains at least one class that will be used to link to other entities
 
 ##Comments on the self-assessment##
-_(If required)_
+_All the points were addressed and resolved._
