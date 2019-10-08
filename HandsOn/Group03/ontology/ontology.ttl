@@ -3,18 +3,11 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix obda: <https://w3id.org/obda/vocabulary#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <http://www.group03.org/saferoads/TrafficAccidentsontology> .
 
 <http://www.group03.org/saferoads/TrafficAccidentsontology> rdf:type owl:Ontology .
-
-#################################################################
-#    Annotation properties
-#################################################################
-
-###  http://www.group03.org/saferoads/TrafficAccidentsontology#lightcondition
-:lightcondition rdf:type owl:AnnotationProperty .
-
 
 #################################################################
 #    Object Properties
@@ -24,7 +17,7 @@
 :has_victim rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf owl:topObjectProperty ;
             rdfs:domain :Accident ;
-            rdfs:range :Casuality .
+            rdfs:range :Casualty .
 
 
 ###  http://www.group03.org/saferoads/TrafficAccidentsontology#involves
@@ -42,7 +35,7 @@
 ###  http://www.group03.org/saferoads/TrafficAccidentsontology#victim_of
 :victim_of rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf owl:topObjectProperty ;
-           rdfs:domain :Casuality ;
+           rdfs:domain :Casualty ;
            rdfs:range :Accident .
 
 
@@ -52,7 +45,7 @@
 
 ###  http://www.group03.org/saferoads/TrafficAccidentsontology#age
 :age rdf:type owl:DatatypeProperty ;
-     rdfs:domain :Casuality ;
+     rdfs:domain :Casualty ;
      rdfs:range xsd:int .
 
 
@@ -101,13 +94,13 @@
 :Accident rdf:type owl:Class .
 
 
-###  http://www.group03.org/saferoads/TrafficAccidentsontology#Casuality
-:Casuality rdf:type owl:Class .
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#Casualty
+:Casualty rdf:type owl:Class .
 
 
 ###  http://www.group03.org/saferoads/TrafficAccidentsontology#Class
 :Class rdf:type owl:Class ;
-       rdfs:subClassOf :Casuality .
+       rdfs:subClassOf :Casualty .
 
 
 ###  http://www.group03.org/saferoads/TrafficAccidentsontology#Lighting_Conditions
@@ -122,7 +115,7 @@
 
 ###  http://www.group03.org/saferoads/TrafficAccidentsontology#Severity
 :Severity rdf:type owl:Class ;
-          rdfs:subClassOf :Casuality .
+          rdfs:subClassOf :Casualty .
 
 
 ###  http://www.group03.org/saferoads/TrafficAccidentsontology#Type
@@ -145,7 +138,7 @@
 
 ###  http://www.group03.org/saferoads/TrafficAccidentsontology#sex
 :sex rdf:type owl:Class ;
-     rdfs:subClassOf :Casuality .
+     rdfs:subClassOf :Casualty .
 
 
 ###  http://www.group03.org/saferoads/TrafficAccidentsontology#surface-condition
