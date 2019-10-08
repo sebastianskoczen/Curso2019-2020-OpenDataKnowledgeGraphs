@@ -1,0 +1,278 @@
+@prefix : <http://www.group03.org/saferoads/TrafficAccidentsontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix obda: <https://w3id.org/obda/vocabulary#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.group03.org/saferoads/TrafficAccidentsontology> .
+
+<http://www.group03.org/saferoads/TrafficAccidentsontology> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#has_victim
+:has_victim rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain :Accident ;
+            rdfs:range :Casualty .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#involves
+:involves rdf:type owl:ObjectProperty ;
+          rdfs:domain :Accident ;
+          rdfs:range :Vehicle .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#takes_place_in
+:takes_place_in rdf:type owl:ObjectProperty ;
+                rdfs:domain :Accident ;
+                rdfs:range :environment .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#victim_of
+:victim_of rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:domain :Casualty ;
+           rdfs:range :Accident .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#age
+:age rdf:type owl:DatatypeProperty ;
+     rdfs:domain :Casualty ;
+     rdfs:range xsd:int .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#date
+:date rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Accident ;
+      rdfs:range xsd:dateTime .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#grid_ref_easting
+:grid_ref_easting rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Accident ;
+                  rdfs:range xsd:int .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#grid_ref_northing
+:grid_ref_northing rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Accident ;
+                   rdfs:range xsd:int .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#nbr_vehicles
+:nbr_vehicles rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain :Accident ;
+              rdfs:range xsd:int .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#time
+:time rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Accident ;
+      rdfs:range xsd:string .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#first_road_class_&_number
+<http://www.group03.org/saferoads/TrafficAccidentsontology#first_road_class_&_number> rdf:type owl:DatatypeProperty ;
+                                                                                      rdfs:domain :Accident ;
+                                                                                      rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#Accident
+:Accident rdf:type owl:Class .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#Casualty
+:Casualty rdf:type owl:Class .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#Class
+:Class rdf:type owl:Class ;
+       rdfs:subClassOf :Casualty .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#Lighting_Conditions
+:Lighting_Conditions rdf:type owl:Class ;
+                     rdfs:subClassOf :environment .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#Road_profil
+:Road_profil rdf:type owl:Class ;
+             rdfs:subClassOf :environment .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#Severity
+:Severity rdf:type owl:Class ;
+          rdfs:subClassOf :Casualty .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#Type
+:Type rdf:type owl:Class ;
+      rdfs:subClassOf :Vehicle .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#Vehicle
+:Vehicle rdf:type owl:Class .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#Weather_condition
+:Weather_condition rdf:type owl:Class ;
+                   rdfs:subClassOf :environment .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#environment
+:environment rdf:type owl:Class .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#sex
+:sex rdf:type owl:Class ;
+     rdfs:subClassOf :Casualty .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#surface-condition
+:surface-condition rdf:type owl:Class ;
+                   rdfs:subClassOf :environment .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#Car
+:Car rdf:type owl:NamedIndividual ,
+              :Type .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#Driver_or_rider
+:Driver_or_rider rdf:type owl:NamedIndividual ,
+                          :Class .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#Dry
+:Dry rdf:type owl:NamedIndividual ,
+              :surface-condition .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#Fatal
+:Fatal rdf:type owl:NamedIndividual ,
+                :Severity .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#Female
+:Female rdf:type owl:NamedIndividual ,
+                 :sex .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#Fine_with_high_winds
+:Fine_with_high_winds rdf:type owl:NamedIndividual ,
+                               :Weather_condition .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#Male
+:Male rdf:type owl:NamedIndividual ,
+               :sex .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#Motorcycle
+:Motorcycle rdf:type owl:NamedIndividual ,
+                     :Type .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#Pedal_cycleCar
+:Pedal_cycleCar rdf:type owl:NamedIndividual ,
+                         :Type .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#Pedestrian
+:Pedestrian rdf:type owl:NamedIndividual ,
+                     :Class .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#Serious
+:Serious rdf:type owl:NamedIndividual ,
+                  :Severity .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#Slight
+:Slight rdf:type owl:NamedIndividual ,
+                 :Severity .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#Snow
+:Snow rdf:type owl:NamedIndividual ,
+               :surface-condition .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#Vehicle_or_pillion_passenger
+:Vehicle_or_pillion_passenger rdf:type owl:NamedIndividual ,
+                                       :Class .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#fine_without_high_winds
+:fine_without_high_winds rdf:type owl:NamedIndividual ,
+                                  :Weather_condition .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#raining_with_high_winds
+:raining_with_high_winds rdf:type owl:NamedIndividual ,
+                                  :Weather_condition .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#raining_without_high_winds
+:raining_without_high_winds rdf:type owl:NamedIndividual ,
+                                     :Weather_condition .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#snowing_with_high_winds
+:snowing_with_high_winds rdf:type owl:NamedIndividual ,
+                                  :Weather_condition .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#snowing_without_high_winds
+:snowing_without_high_winds rdf:type owl:NamedIndividual ,
+                                     :Weather_condition .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#Darkness:_Street_lights_present_and_lit
+:Darkness:_Street_lights_present_and_lit rdf:type owl:NamedIndividual ,
+                                                  :Lighting_Conditions .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#Darkness:_no_street_lightning
+:Darkness:_no_street_lightning rdf:type owl:NamedIndividual ,
+                                        :Lighting_Conditions .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#Daylight:Street_lights_present
+:Daylight:Street_lights_present rdf:type owl:NamedIndividual ,
+                                         :Lighting_Conditions .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#Frost/Ice
+<http://www.group03.org/saferoads/TrafficAccidentsontology#Frost/Ice> rdf:type owl:NamedIndividual ,
+                                                                               :surface-condition .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#Taxi/Private_hire_car
+<http://www.group03.org/saferoads/TrafficAccidentsontology#Taxi/Private_hire_car> rdf:type owl:NamedIndividual ,
+                                                                                           :Type .
+
+
+###  http://www.group03.org/saferoads/TrafficAccidentsontology#Wet/Damp
+<http://www.group03.org/saferoads/TrafficAccidentsontology#Wet/Damp> rdf:type owl:NamedIndividual ,
+                                                                              :surface-condition .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

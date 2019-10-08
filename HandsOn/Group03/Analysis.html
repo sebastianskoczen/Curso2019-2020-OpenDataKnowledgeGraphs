@@ -1,0 +1,59 @@
+<!doctype.html>
+
+<html lang ="en">
+<head>
+	<meta charset="utf-8">
+	
+	<title>Analysis</title>
+	
+</head>
+
+<body>
+	<div><t1><b> Analysis of Licensing of the Data Source</b><t1></div>	
+	<ul>
+	<li>The data set is published by the UK Government under the Open Government Licence for public sector information</li>
+	<li>The licence is compatible with the Creative Commons Attribution (CC-BY) licence and is maintained by the National Archives</li>
+	<li>The licence allows us to use the dataset freely under the proposed application</li>
+	<li>The link to the licence can be found <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">here</a>
+	</ul>
+	
+	<div><strong>Analysis of the Data Source</strong></div>
+	<p>The dataset used throughout this project is a CSV (comma separated values) file that contains road traffic accidents in Leeds City. The dataset comprises of 15 columns (variables) with 2203 instances of traffic accidents in Leeds city in the year of 2017. 5 of the variables hold integer values, namely:</p>
+	<ul>
+	<li><strong><em>Grid Ref(erence) : Easting</em></strong> &mdash; Denotes geographical location of an accident, horizontally.</li>
+	<li><strong><em>Grid Ref(erence): Northing</em></strong> &mdash; Denotes geographical location of an accident, vertically.</li>
+	<li><strong><em>Number of Vehicles</em></strong> &mdash; Denotes number of vehicles involved in an accident (ranges from 1 to 7).</li>
+	<li><strong><em>Time (24 Hour Format)</em></strong> &mdash; Time (hours, minutes) of an accident in a day with 24-hour format .</li>
+	<li><strong><em>Age of Casualty</em></strong> &mdash; Age of the person that had a casualty due to an accident (ranges from 1 to 96).</li>
+	</ul>
+	<p>The remaining 10 variables hold string values described as the following:</p>
+	<ul>
+	<li><strong><em>Reference Number</em></strong> &mdash; Denotes a reference number for an accident (1711 different accidents with remaining 492 accidents having multiple crash reports at once).</li>
+	<li><strong><em>Accident Date</em></strong> &mdash; Date of the accident in a month-day-year format (all in 2017).</li>
+	<li><strong><em>1st Road Class &amp; No</em></strong> &mdash; Class and name of the road that an accident happened in (52 different roads).</li>
+	<li><strong><em>Road Surface</em></strong> &mdash; Quality of the surface of the road in an accident with 3 levels as dry, frost/ice snow or wet/damp.</li>
+	<li><strong><em>Lighting Conditions</em></strong> &mdash; Lighting conditions on the road in an accident, with 6 different possibilities: <em>Daylight: Street lights present</em>, <em>Darkness: Street lights present but unlit</em>, <em>Darkness: Street lights present and lit and lit</em>, <em>Darkness: Street lights present and lit</em>, <em>Darkness: Street lighting unknown</em> or <em>Darkness: No street lighting</em>.</li>
+	<li><strong><em>Weather Conditions</em></strong> &mdash; Weather conditions during an accident with 8 different possibilities: <em>Fine with high winds</em>, <em>Fine without high winds</em>, <em>Fog or mist (if hazard)</em>, <em>Other</em>, <em>Raining with high winds</em>, <em>Raining without high winds</em>, <em>Snowing with high winds</em> or <em>Snowing without high winds</em>.</li>
+	<li><strong><em>Type of the Vehicle</em></strong> &mdash; Type of a vehicle that was involved in an accident with 16 different possibilities, ranging from <em>car</em> and <em>taxi</em> to <em>pedal cycle</em> and <em>motorcycle</em>.</li>
+	<li><strong><em>Casualty Class</em></strong> &mdash; Denotes the class of a casualty due to an accident with 3 different possibilities: <em>Driver or rider</em>, <em>Pedestrian</em> or <em>Vehicle or pillion passenger</em>.</li>
+	<li><strong><em>Casualty Severity</em></strong> &mdash; Denotes severity of a casualty due to an accident with 3 different possibilities: <em>fatal</em>, <em>serious</em> or <em>slight</em>.</li>
+	<li><strong><em>Sex of Casualty</em></strong> &mdash; Sex of a casualty due to an accident with 2 possibilities: <em>males</em> or <em>females</em>.</li>
+	</ul>	
+	
+	
+	
+	<div><t1><b> Defining resource naming strategy:</b></t1></div>
+    	<ul>
+  	<li>The URI domain to be used is <b>http://group03.org/</b> . This domain is chosen because it's available.</li>
+  	<li> A subfolder "saferoad" will be added to the domain as the ontology model and the data are related to "saferoads" application.</li>
+  	<li> Ontology model classes: the classes in the ontology will have the form
+	<b>http://www.group03.org/saferoads/<i>OntologyNAME#ClassNAME</i></b></li>
+  	<li>Ontology model properties: the properties in the ontology will have the form 
+	<b>http://www.group03.org/saferoads/<i>OntologyNAME</i>#<i>PropertyNAME</i></b></li>
+  	<li>Instances: the instances in the ontology will have the form
+	<b>http://www.group03.org/saferoads/TrafficAccidentsontology/resource/<i>ClassNAME</i>#<i>IDENTIFIER</i></b></li>
+  	</ul>
+	
+</body>
+</html>
+	
