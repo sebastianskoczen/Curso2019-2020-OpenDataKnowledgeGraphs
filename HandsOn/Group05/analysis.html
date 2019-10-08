@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+    }
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    </style>
+<head>
+	<meta charset="UTF-8">
+	<title>Data analysis</title>
+</head>
+<body>
+    <h1>Analyses performed over the data source</h1>
+    <table class="table table-bordered table-hover table-condensed">
+        <thead>
+        <tr>
+            <th title="Field #1">Variable</th>
+            <th title="Field #2">Type</th>
+            <th title="Field #3">Range (rounded)</th>
+            <th title="Field #4">Comments</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>@id</td>
+            <td>String</td>
+            <td>Unique</td>
+            <td>URI, prefix http://environment.data.gov.uk/water-quality/data/measurement/</td>
+        </tr>
+        <tr>
+            <td>sample.samplingPoint</td>
+            <td>String</td>
+            <td>320 choices</td>
+            <td>URI, prefix http://environment.data.gov.uk/water-quality/id/sampling-point/</td>
+        </tr>
+        <tr>
+            <td>sample.samplingPoint.notation</td>
+            <td>String</td>
+            <td>320 choices</td>
+            <td>Suffix to samplingPoint</td>
+        </tr>
+        <tr>
+            <td>sample.samplingPoint.label</td>
+            <td>String</td>
+            <td>320 choices</td>
+            <td>SampingPoint Location Names</td>
+        </tr>
+        <tr>
+            <td>sample.sampleDateTime</td>
+            <td>TimeStamp</td>
+            <td>2018-01-01 to 2018-12-20</td>
+            <td>From 2018-01-01-00:07:00 to 2018-12-20-14:24:00</td>
+        </tr>
+        <tr>
+            <td>determinand.label</td>
+            <td>String</td>
+            <td>499 choices</td>
+            <td>Chemical determinand labels</td>
+        </tr>
+        <tr>
+            <td>determinand.definition</td>
+            <td>String</td>
+            <td>501 choices</td>
+            <td>Definition of above labels</td>
+        </tr>
+        <tr>
+            <td>determinand.notation</td>
+            <td>Decimal</td>
+            <td>0.00 - 10,000.00</td>
+            <td>Notation of above definitions</td>
+        </tr>
+        <tr>
+            <td>resultQualifier.notation</td>
+            <td>Operator</td>
+            <td>&gt;, &lt; or empty</td>
+            <td>Result qualifier, defined as excess, normal or insufficient level</td>
+        </tr>
+        <tr>
+            <td>result</td>
+            <td>Decimal</td>
+            <td>0.00 - 10,000,000.00</td>
+            <td>Chemical determinand levels</td>
+        </tr>
+        <tr>
+            <td>codedResultInterpretation.interpretation</td>
+            <td>String</td>
+            <td>Empty</td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>Determinand.unit.label</td>
+            <td>String</td>
+            <td>24 choices</td>
+            <td>Units of chemical determinand measurements</td>
+        </tr>
+        <tr>
+            <td>sample.sampledMaterialType.label</td>
+            <td>String</td>
+            <td>15 choices</td>
+            <td>Sample’s material type</td>
+        </tr>
+        <tr>
+            <td>sample.isComplianceSample</td>
+            <td>Boolean</td>
+            <td>true/false</td>
+            <td>Boolean of if sample is compliance</td>
+        </tr>
+        <tr>
+            <td>sample.purpose.label</td>
+            <td>String</td>
+            <td>13 choices</td>
+            <td>The purpose of the sample taken</td>
+        </tr>
+        <tr>
+            <td>sample.samplingPoint.easting</td>
+            <td>Decimal</td>
+            <td>301 choices</td>
+            <td>Easting coordinate (UTM System) where the sample was taken</td>
+        </tr>
+        <tr>
+            <td>sample.samplingPoint.northing</td>
+            <td>Decimal</td>
+            <td>309 choices</td>
+            <td>Northing coordinate (UTM System) where the sample was taken</td>
+        </tr>
+        </tbody>
+    </table>
+
+
+    <h1>Licensing of the data source</h1>
+<div>When we are working with a database from a public source, one important thing we need to keep in mind, the license. </div>
+<div>The license is an agreement that allow us to use a data set. If we do not have this permission, we will violate the rights of others. 
+To discuss if we have the rights to use this database, we have to follow the following steps of analysis:</div>
+
+	<br>
+	<div style="font-size:20px;">&diams;Step 1: Identify who is the publisher of the dataset and its rightsholder:</div>
+	</br>
+	<p>Publisher: Environment Agency</p>
+	<p>Rights holder: The Water Quality Archive</p>
+	
+	
+	
+	<br>
+	<div style="font-size:20px;">&diams;Step 2: find the applicable license and analyze the legal terms.</div>
+	</br>
+	<div>
+	you can access the database license at: 
+	<a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Click on license</a>
+	</div>
+	<p>The right holder grants us a license to use the Information subject to the conditions below:</p>
+	<p>We are free to:</p>
+	<div>
+	&radic;copy, publish, distribute and transmit the Information;</br>
+	&radic;adapt the Information;</br>
+	&radic;exploit the Information commercially and non-commercially.
+	</div>
+	
+	
+	
+	
+	<br>
+	<div style="font-size:20px;">&diams;Step 3: find the potential license.</div>
+	</br>
+	<p>In addition to the free right which the rights holder gives to us, there is a potential license. According to this license, we can study the things we cannot do.</p>
+	<p>We are not free to:</p>
+	&otimes;Access personal data in the information;</br>
+	&otimes;Use the departmental or public sector organisation logos, crests and the Royal Arms except where they form an integral part of a document or dataset;</br>
+	&otimes;third party rights the Information Provider is not authorised to license;</br>
+	&otimes;other intellectual property rights, including patents, trade marks, and design rights; </br>
+	&otimes;identity documents such as the British Passport
+    <h1>Resource naming strategy</h1>
+
+    <table>
+        <tr>
+          <th>Name</th>
+          <th>URI</th>
+        </tr>
+        <tr>
+          <td>Domain</td>
+          <td>http://group05.com/</td>
+        </tr>
+        <tr>
+          <td>Ontological terms path</td>
+          <td>http://group05.com/ontology/Water-Quality#</td>
+        </tr>
+        <tr>
+          <td>Individuals path</td>
+          <td>http://group05.com/resource/</td>
+        </tr>
+        <tr>
+          <td>Ontological terms pattern</td>
+          <td>http://group05.com/ontology/Water-Quality#&lt;term_name&gt;</td>
+        </tr>
+        <tr>
+          <td>Individuals pattern</td>
+          <td>http://group05.com/resource/&lt;resource_type&gt;/&lt;resource_name&gt;</td>
+        </tr>
+      </table>
+
+	</body>
+</html>
