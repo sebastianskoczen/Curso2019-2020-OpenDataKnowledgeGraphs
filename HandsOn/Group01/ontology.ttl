@@ -1,0 +1,54 @@
+@prefix : <http://smartcity.linkeddata.es/YESS/ontology/ontologyExample#> .
+@prefix ex: <http://smartcity.linkeddata.es/YESS/ontology/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+Prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+
+
+: a owl:Ontology .
+
+# Classes
+
+:Segment a owl:Class ;
+   rdfs:label "Segment" ;
+   rdfs:subclassof :Street .
+
+:Street a owl:Class ;
+   rdfs:label "Street" ;
+   rdfs:subclassof owl:Thing .
+
+:Measurement a owl:Class ;
+   rdfs:label "Measurement" ;
+   rdfs:subclassof owl:Thing .
+
+# Object Properties
+
+:toStreet a owl:ObjectProperty ;
+	rdfs:range :Street .
+
+:fromStreet a owl:ObjectProperty ;
+	rdfs:range :Street .
+
+:measuredIn a owl:ObjectProperty ;
+	rdfs:range :Segment .
+
+# Datatype Properties
+
+:timeStamp a owl:DatatypeProperty ;
+	rdfs:range xsd:dateTime .
+
+:speed a owl:DatatypeProperty ;
+	rdfs:range xsd:integer .
+
+:startLat a owl:DatatypeProperty ;
+   rdfs:range wgs:lat .
+
+:endLat a owl:DatatypeProperty ;
+   rdfs:range wgs:lat .
+
+:startLong a owl:DatatypeProperty ;
+   rdfs:range wgs:long .
+
+:endLong a owl:DatatypeProperty ;
+   rdfs:range wgs:long .
