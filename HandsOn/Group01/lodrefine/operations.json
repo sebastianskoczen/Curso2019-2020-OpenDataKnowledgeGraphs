@@ -1,0 +1,453 @@
+[
+  {
+    "op": "core/column-removal",
+    "columnName": "RECORD_ID",
+    "description": "Remove column RECORD_ID"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "START_LOCATION",
+    "description": "Remove column START_LOCATION"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "END_LOCATION",
+    "description": "Remove column END_LOCATION"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Zip Codes",
+    "description": "Remove column Zip Codes"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Community Areas",
+    "description": "Remove column Community Areas"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Wards",
+    "description": "Remove column Wards"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "COMMENTS",
+    "description": "Remove column COMMENTS"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SEGMENT_ID",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column SEGMENT_ID using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SPEED",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column SPEED using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "TIME",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column TIME using expression value.toDate()"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "HOUR",
+    "description": "Remove column HOUR"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "DAY_OF_WEEK",
+    "description": "Remove column DAY_OF_WEEK"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "MONTH",
+    "description": "Remove column MONTH"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "START_LATITUDE",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column START_LATITUDE using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "START_LONGITUDE",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column START_LONGITUDE using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "END_LATITUDE",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column END_LATITUDE using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "END_LONGITUDE",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column END_LONGITUDE using expression value.toNumber()"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "BUS_COUNT",
+    "description": "Remove column BUS_COUNT"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "MESSAGE_COUNT",
+    "description": "Remove column MESSAGE_COUNT"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "DIRECTION",
+    "description": "Remove column DIRECTION"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "SEGMENT_ID",
+    "expression": "grel:cells[\"FROM_STREET\"].value + cells[\"TO_STREET\"].value + cells[\"STREET_HEADING\"].value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column SEGMENT_ID using expression grel:cells[\"FROM_STREET\"].value + cells[\"TO_STREET\"].value + cells[\"STREET_HEADING\"].value"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "LENGTH",
+    "description": "Remove column LENGTH"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "STREET_HEADING",
+    "description": "Remove column STREET_HEADING"
+  },
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "schema": {
+      "prefixes": [
+        {
+          "name": "yess",
+          "uri": ""
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "foaf",
+          "uri": "http://xmlns.com/foaf/0.1/"
+        }
+      ],
+      "baseUri": "http://smartcity.linkeddata.es/YESS/resource/",
+      "rootNodes": [
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "value",
+          "isRowNumberCell": true,
+          "links": [
+            {
+              "uri": "http://smartcity.linkeddata.es/YESS/ontology/ontologyExample#timeStamp",
+              "curie": "yess:timeStamp",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "columnName": "TIME",
+                "expression": "value",
+                "isRowNumberCell": false
+              }
+            },
+            {
+              "uri": "http://smartcity.linkeddata.es/YESS/ontology/ontologyExample#speed",
+              "curie": "yess:speed",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "columnName": "SPEED",
+                "expression": "value",
+                "isRowNumberCell": false
+              }
+            },
+            {
+              "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+              "curie": "yess:label",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": true
+              }
+            },
+            {
+              "uri": "http://smartcity.linkeddata.es/YESS/ontology/ontologyExample#measuredIn",
+              "curie": "yess:measuredIn",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "columnName": "SEGMENT_ID",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "links": [],
+                "rdfTypes": [
+                  {
+                    "uri": "http://smartcity.linkeddata.es/YESS/ontology/ontologyExample#Segment",
+                    "curie": "yess:Segment"
+                  }
+                ]
+              }
+            }
+          ],
+          "rdfTypes": [
+            {
+              "uri": "http://smartcity.linkeddata.es/YESS/ontology/ontologyExample#Measurement",
+              "curie": "yess:Measurement"
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "columnName": "SEGMENT_ID",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "links": [
+            {
+              "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+              "curie": "yess:label",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "columnName": "SEGMENT_ID",
+                "expression": "value",
+                "isRowNumberCell": false
+              }
+            },
+            {
+              "uri": "http://smartcity.linkeddata.es/YESS/ontology/ontologyExample#onStreet",
+              "curie": "yess:onStreet",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "columnName": "STREET",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "links": [],
+                "rdfTypes": [
+                  {
+                    "uri": "http://smartcity.linkeddata.es/YESS/ontology/ontologyExample#Street",
+                    "curie": "yess:Street"
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "http://smartcity.linkeddata.es/YESS/ontology/ontologyExample#startLat",
+              "curie": "yess:startLat",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "columnName": "START_LATITUDE",
+                "expression": "value",
+                "isRowNumberCell": false
+              }
+            },
+            {
+              "uri": "http://smartcity.linkeddata.es/YESS/ontology/ontologyExample#startLong",
+              "curie": "yess:startLong",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "columnName": "START_LONGITUDE",
+                "expression": "value",
+                "isRowNumberCell": false
+              }
+            },
+            {
+              "uri": "http://smartcity.linkeddata.es/YESS/ontology/ontologyExample#endLat",
+              "curie": "yess:endLat",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "columnName": "END_LATITUDE",
+                "expression": "value",
+                "isRowNumberCell": false
+              }
+            },
+            {
+              "uri": "http://smartcity.linkeddata.es/YESS/ontology/ontologyExample#endLong",
+              "curie": "yess:endLong",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "columnName": "END_LONGITUDE",
+                "expression": "value",
+                "isRowNumberCell": false
+              }
+            },
+            {
+              "uri": "http://smartcity.linkeddata.es/YESS/ontology/ontologyExample#fromStreet",
+              "curie": "yess:fromStreet",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "columnName": "FROM_STREET",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "links": [],
+                "rdfTypes": [
+                  {
+                    "uri": "http://smartcity.linkeddata.es/YESS/ontology/ontologyExample#Street",
+                    "curie": "yess:Street"
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "http://smartcity.linkeddata.es/YESS/ontology/ontologyExample#toStreet",
+              "curie": "yess:toStreet",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "columnName": "TO_STREET",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "links": [],
+                "rdfTypes": [
+                  {
+                    "uri": "http://smartcity.linkeddata.es/YESS/ontology/ontologyExample#Street",
+                    "curie": "yess:Street"
+                  }
+                ]
+              }
+            }
+          ],
+          "rdfTypes": [
+            {
+              "uri": "http://smartcity.linkeddata.es/YESS/ontology/ontologyExample#Segment",
+              "curie": "yess:Segment"
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "columnName": "STREET",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "links": [
+            {
+              "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+              "curie": "yess:label",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "columnName": "STREET",
+                "expression": "value",
+                "isRowNumberCell": false
+              }
+            }
+          ],
+          "rdfTypes": [
+            {
+              "uri": "http://smartcity.linkeddata.es/YESS/ontology/ontologyExample#Street",
+              "curie": "yess:Street"
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "columnName": "FROM_STREET",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "links": [
+            {
+              "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+              "curie": "yess:label",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "columnName": "FROM_STREET",
+                "expression": "value",
+                "isRowNumberCell": false
+              }
+            }
+          ],
+          "rdfTypes": [
+            {
+              "uri": "http://smartcity.linkeddata.es/YESS/ontology/ontologyExample#Street",
+              "curie": "yess:Street"
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "columnName": "TO_STREET",
+          "expression": "value",
+          "isRowNumberCell": false,
+          "links": [
+            {
+              "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+              "curie": "yess:label",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "columnName": "TO_STREET",
+                "expression": "value",
+                "isRowNumberCell": false
+              }
+            }
+          ],
+          "rdfTypes": []
+        }
+      ]
+    },
+    "description": "Save RDF schema skeleton"
+  }
+]
