@@ -1,0 +1,193 @@
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link href="images/main.css" rel="stylesheet">
+	<title>Dataset Analysis</title>
+</head>
+
+<body>
+    <header>
+        <h1>Dataset analysis and naming strategy</h1>
+    </header>
+    <br>
+    <p>
+        <h2>License analysis for selected datasets</h2>
+
+        The first 2 datasets have PPDL license. You are free:<br>
+        •	To Share: To copy, distribute and use the database.<br>
+        •	To Create: To produce works from the database.<br>
+        •	To Adapt: To modify, transform and build upon the database.<br>
+        As long as you:<br>
+        •	Blank: This section is intentionally left blank. The PDDL imposes no restrictions on your use of the PDDL licensed database.<br>
+        Source: https://opendatacommons.org/licenses/pddl/summary/<br><br>
+
+        The license of the third dataset is more restrictive: Motivate hereby grants to you a non-exclusive, royalty-free, limited, perpetual license to access, reproduce, analyze, copy, modify, distribute in your product or service and use the Data for any lawful purpose (“License”). <br>
+        Prohibited Conduct: Host, stream, publish, distribute, sublicense, or sell the Data as a stand-alone dataset; provided, however, you may include the Data as source material, as applicable, in analyses, reports, or studies published or distributed for non-commercial purposes. <br>
+        However, as stated above, we are able to use the dataset as source material in our analysis.<br>
+        Source: https://www.bluebikes.com/data-license-agreement.
+    </p>
+    <br>
+    <p>
+        <h2>License for produced data</h2>
+
+        The license for the work to be produced aims at being as open as possible. Thus, our license mimics the stictest one we are using at the moment, that is here reproduced again:<br><br>
+        <i>
+            This license hereby grants to you a non-exclusive, royalty-free, limited, perpetual license to access, reproduce, analyze, copy, modify, distribute in your product or service and use the Data for any lawful purpose (“License”). <br>
+            Prohibited Conduct: Host, stream, publish, distribute, sublicense, or sell the Data as a stand-alone dataset; provided, however, you may include the Data as source material, as applicable, in analyses, reports, or studies published or distributed for non-commercial purposes. <br>
+            However, as stated above, we are able to use the dataset as source material in our analysis.
+        </i>
+    </p>
+    <br>
+    <p>
+        <h2>Naming strategy</h2>
+        According to the principles of Linked Open Data and to the best practices for URIs by well-established guides, we opted for the following naming strategy:
+        <br><br>
+        •	According to the Cool URIs guide [Sauermann and Cyganiak, 2008],
+				hash URIs will be used for our ontology since it is rather small.
+        <br><br>
+        •	According to the same good practices and principles, slash URIs will
+				be used for our resources since they may rapidly increase in volume.
+				The content negotiation chosen for the 303 redirection due to the slash
+				URIs is the forwarding to a generic document, since we expect the
+				different representations to conevey similar information in different
+				forms (as advised by the already mentioned Cool URIs).
+
+        <br><br>
+        •	The URI domain chosen is <i>www.bostonbikenetwork.com</i>; we opted for that since it is under our direct control (potentially: it is available, but we didn't actually purchase it. We will consider it as it were ours for the purpose of these assignments).
+        <br><br>
+        •	Ontology model for classes: the classes of the ontology will have the form of:<br>
+
+&nbsp&nbsp&nbsp <i>       www.bostonbikenetwork.com/ontology/&lt;ontologyName&gt;#&lt;className&gt;</i><br>
+
+&nbsp    An example for the class Bike in the bike ontology could be:<br>
+
+&nbsp&nbsp&nbsp <i>       www.bostonbikenetwork.com/ontology/BikeOntology#Bike<br></i>
+        <br>
+        •	Ontology model for properties: the properties of the ontology will have the form of:<br>
+
+&nbsp&nbsp&nbsp <i>       www.bostonbikenetwork.com/ontology/&lt;ontologyName&gt;#&lt;propertyName&gt;</i><br>
+
+&nbsp        An example for the property hasID of the Bike class in the bike ontology could be:<br>
+
+&nbsp&nbsp&nbsp <i>       www.bostonbikenetwork.com/ontology/BikeOntology#hasID<br></i>
+        <br>
+        •	Instances model: the instances in the ontology will have the form of:<br>
+
+&nbsp&nbsp&nbsp <i>       www.bostonbikenetwork.com/resource/&lt;className&gt;/&lt;identifier&gt;</i><br>
+
+&nbsp        An example for the instance of a bike with ID <i>1ur8f42f7</i> could be:<br>
+
+&nbsp&nbsp&nbsp <i>       www.bostonbikenetwork.com/resource/Bike/1ur8f42f7</i><br>
+&nbsp       It is important to be noted that the ID naming strategy is independent from the URI naming strategy, and that individual URIs are independent, from a strict point of view, from class URIs.
+    </p>
+    <br>
+    <p>
+        <h2>Dataset analysis</h2>
+
+				There are three main datasets Existing that will be used in our project:
+				<i>Bike Network</i>, <i>Blue Bikes System</i> and <i>Data and Hubway
+				Stations</i>.
+
+				<h3>1. Existing Bike Network</h3>
+				<h4>1.1 Dataset introduction</h4>
+				This dataset contains bicycle facilities within the City of Boston that
+				currently exist or are under construction. We derived road centerlines
+				from the Massachusetts EOT Road centerline data set. Where necessary,
+				we split or realigned road segments to increase accuracy. We derived
+				off-road centerline segments from Massachusetts Area Planning Council
+				trail data, City of Boston 2011 orthophotography, and community sources
+				verified in the field.
+
+				<h4>1.2 Dataset analysis</h4>
+				There are 11 attributes as following.<br>
+				<center><img src="images/attr_EBN_1.png" width=800></center>
+				<center><img src="images/attr_EBN_2.png" width=800></center>
+				<center><img src="images/attr_EBN_3.png" width=800></center>
+				<h4>1.3 Example</h4>
+				<center><img src="images/head_EBN.png" width=1500></center>
+				<h4>1.4 OpenRefine analysis</h4>
+				Analysis in order to understand the type, range and count of the
+				attributes.
+				<table>
+						<tr>
+								<th width=300>
+									<img src="images/openRef_EBN_1.png">
+								</th>
+								<th width=300>
+									<img src="images/openRef_EBN_2.png">
+								</th>
+								<th width=300>
+									<img src="images/openRef_EBN_3.png">
+								</th>
+						</tr>
+				</table>
+				<br><br>
+				<h3>2. Blue Bikes System Data</h3>
+				<h4>2.1 Dataset introduction</h4>
+				Blue Bikes (formerly Hubway) is owned by the municipalities of Boston,
+				Brookline, Cambridge and Somerville, and operated by Motivate
+				International, Inc. This external website, maintained by Motivate
+				International, Inc., provides datasets on Blue Bikes usage.<br>
+				<br>
+				It includes:<br>
+				Comprehensive set of trip histories which is updated each annual quarter
+				Real time system data, published in open General Bikeshare Feed
+				Specification (GBFS) format - a format recommended by the North American
+				Bike Share Association (NABSA).<br>
+				This data is provided according to the Blue Bikes Data License Agreement.
+
+				<h4>2.2 Dataset analyses</h4>
+				The dataset includes 15 attributes:<br>
+				Trip Duration (seconds);<br>
+				Start Time and Date;<br>
+				Stop Time and Date;<br>
+				Start Station Name & ID;<br>
+				End Station Name & ID;<br>
+				Bike ID;<br>
+				User Type (Casual = Single Trip or Day Pass user; Member = Annual or Monthly Member);<br>
+				Birth Year;<br>
+				Gender, self-reported by member.
+				<h4>2.3 Example</h4>
+				<center><img src="images/head_BBSD.png" width=1500></center>
+				<h4>1.4 OpenRefine analysis</h4>
+				Analysis in order to understand the type, range and count of the
+				attributes.<br>
+				<table>
+						<tr>
+								<th width=300>
+									<img src="images/openRef_BBSD_1.png">
+								</th>
+								<th width=300>
+									<img src="images/openRef_BBSD_2.png">
+								</th>
+								<th width=300>
+									<img src="images/openRef_BBSD_3.png">
+								</th>
+						</tr>
+				</table>
+				<br><br>
+				<h3>3. Hubway Station</h3>
+				<h4>3.1 Dataset introduction</h4>
+				Station location data from Hubway.
+				<h4>3.2 Dataset analyses</h4>
+				The dataset includes:<br>
+				The coordinates of Hubway station;<br>
+				The object ID of station;<br>
+				The name of the street where the station located.
+				<h4>3.3 Example</h4>
+				<center><img src="images/head_HS.png"></center>
+				<h4>1.4 OpenRefine analysis</h4>
+				Analysis in order to understand the type, range and count of the
+				attributes.<br>
+				Note: here the attributes <i>lat, long, nbBikes, nbEmptyDocks,
+				latestUpdateTime</i> are not considered since they are completely empty.
+				<br>
+				<img src="images/openRef_HS.png">
+
+		</p>
+
+
+</body>
+
+</html>
