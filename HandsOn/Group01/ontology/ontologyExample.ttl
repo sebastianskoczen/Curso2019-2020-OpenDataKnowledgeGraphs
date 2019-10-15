@@ -35,6 +35,12 @@
 :measuredIn a owl:ObjectProperty ;
 	rdfs:range :Segment .
 
+:startPoint a owl:ObjectProperty ;
+   rdfs:range wgs:Point .
+
+:endPoint a owl:ObjectProperty ;
+   rdfs:range wgs:Point .
+
 # Datatype Properties
 
 :timeStamp a owl:DatatypeProperty ;
@@ -42,15 +48,3 @@
 
 :speed a owl:DatatypeProperty ;
 	rdfs:range xsd:integer .
-
-:startLat a owl:DatatypeProperty ;
-   rdfs:range wgs:lat .
-
-:endLat a owl:DatatypeProperty ;
-   rdfs:range wgs:lat .
-
-:startLong a owl:DatatypeProperty ;
-   rdfs:range wgs:long .
-
-:endLong a owl:DatatypeProperty ;
-   rdfs:range wgs:long .
