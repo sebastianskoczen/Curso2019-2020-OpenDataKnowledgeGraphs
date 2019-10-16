@@ -24,27 +24,35 @@
 
 # Object Properties
 :onStreet a owl:ObjectProperty ;
-   rdfs:range :Street .
+   rdfs:range :Street ;
+   rdfs:domain :Segment .
 
 :toStreet a owl:ObjectProperty ;
-	rdfs:range :Street .
+	rdfs:range :Street ;
+   rdfs:domain :Segment .
 
 :fromStreet a owl:ObjectProperty ;
-	rdfs:range :Street .
+	rdfs:range :Street ;
+   rdfs:domain :Segment .
 
 :measuredIn a owl:ObjectProperty ;
-	rdfs:range :Segment .
+	rdfs:range :Segment ;
+   rdfs:domain :Measurement .
 
 :startPoint a owl:ObjectProperty ;
-   rdfs:range wgs:Point .
+   rdfs:range wgs:Point ;
+   rdfs:domain :Segment .
 
 :endPoint a owl:ObjectProperty ;
-   rdfs:range wgs:Point .
+   rdfs:range wgs:Point ;
+   rdfs:domain :Segment .
 
 # Datatype Properties
 
 :timeStamp a owl:DatatypeProperty ;
-	rdfs:range xsd:dateTime .
+	rdfs:range xsd:dateTime ;
+   rdfs:domain :Measurement .
 
 :speed a owl:DatatypeProperty ;
-	rdfs:range xsd:integer .
+	rdfs:range xsd:integer ;
+   rdfs:domain :Measurement .
